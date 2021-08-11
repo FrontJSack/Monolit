@@ -1,9 +1,4 @@
-/**
-* Template Name: Arsha - v4.3.0
-* Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 (function() {
   "use strict";
 
@@ -157,12 +152,12 @@
   /**
    * Preloader
    */
-  let preloader = select('#preloader');
-  if (preloader) {
-    window.addEventListener('load', () => {
-      preloader.remove()
-    });
-  }
+   let preloader = select('#preloader');
+   if (preloader) {
+     window.addEventListener('load', () => {
+       preloader.remove()
+     });
+   }
 
   /**
    * Initiate  glightbox 
@@ -253,5 +248,13 @@
       mirror: false
     });
   });
-
+  
+  document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+    if(textArray.length) setTimeout(type, newTextDelay + 250);
+  });
 })()
+
+window.addEventListener('load',function(){
+  document.querySelector('body').classList.add("loaded")  
+
+});
